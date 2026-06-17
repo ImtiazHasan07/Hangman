@@ -4,8 +4,6 @@ let letterKeys = document.getElementsByClassName('letters')
 let wordsGuessed = []
 let word = words[Math.floor(Math.random() * words.length)]
 
-console.log(word)
-
 function toUnused(element) {
     element.style.border = '2px solid #d3d6da'
     element.style.backgroundColor = '#ffffff'

@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Hangman</title>
-        <link rel='stylesheet' href='./style.css'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    </head>
+  <head>
+    <title>Hangman</title>
+    <link rel='stylesheet' href='./style.css' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  </head>
 
-    <body>
-        <div class='container centre'>
-            <h1 class='header centre'>Hangman</h1>
-            <div class='game-container centre'>
-                <div id='stage-1' class='stage stage-1'></div>
-                <div id='stage-2' class='stage stage-2'></div>
-                <div id='stage-3' class='stage stage-3'></div>
-                <div id='stage-4' class='stage stage-4'></div>
-                <div id='stage-5' class='stage stage-5'></div>
-                <div id='stage-6' class='stage stage-6'></div>
-                <div id='stage-7' class='stage stage-7'></div>
-                <div id='stage-8' class='stage stage-8'></div>
-                <div id='stage-9' class='stage stage-9'></div>
-                <div id='stage-10' class='stage stage-10'></div>
-                <div id='stage-11' class='stage stage-11'></div>
-                <div id='stage-12' class='stage stage-12'></div>
-                <div id='stage-13' class='stage stage-13'></div>
-                <div id='stage-14' class='stage stage-14'></div>
-            </div>
-            <div class='keyboard-container centre'>
-                <div>
-                    <button id='Q' class='key'>Q</button>
-                    <button id='W' class='key'>W</button>
-                    <button id='E' class='key'>E</button>
-                    <button id='R' class='key'>R</button>
-                    <button id='T' class='key'>T</button>
-                    <button id='Y' class='key'>Y</button>
-                    <button id='U' class='key'>U</button>
-                    <button id='I' class='key'>I</button>
-                    <button id='O' class='key'>O</button>
-                    <button id='P' class='key'>P</button>
-                </div>
-                <div>
-                    <button id='A' class='key'>A</button>
-                    <button id='S' class='key'>S</button>
-                    <button id='D' class='key'>D</button>
-                    <button id='F' class='key'>F</button>
-                    <button id='G' class='key'>G</button>
-                    <button id='H' class='key'>H</button>
-                    <button id='J' class='key'>J</button>
-                    <button id='K' class='key'>K</button>
-                    <button id='L' class='key'>L</button>
-                </div>
-                <div>
-                    <button id='Z' class='key'>Z</button>
-                    <button id='X' class='key'>X</button>
-                    <button id='C' class='key'>C</button>
-                    <button id='V' class='key'>V</button>
-                    <button id='B' class='key'>B</button>
-                    <button id='N' class='key'>N</button>
-                    <button id='M' class='key'>M</button>
-                </div>
-            </div>
-            <div hidden id='prompt' class='prompt-container'>
-                <p id='prompt-message' class='prompt-message'>$promptMessage</p>
-            </div>
-            <div hidden id='popup-container' class='popup-container'>
-                <div class='top-container'>
-                    <h2 id='popup-title' class='popup-title'>$outcome</h2>
-                    <button id='close-button' class='close-button'>x</button>
-                </div>
-                <h3 class='popup-content'>The word was $word!</p>
-                    <p class='popup-content'>Tries: $tries</p>
-                    <button id='continue-button' class='continue-button'>Continue</button>
-            </div>
+  <body>
+    <div class='container centre'>
+      <h1 class='header centre'>Hangman</h1>
+      <div class='game-container centre'>
+        <div id='word-container' class='word-container'></div>
+        <div class='stages-container'>
+          <div id='stage-1' class='stage-1 stage'></div>
+          <div id='stage-2' class='stage-2 stage'></div>
+          <div id='stage-3' class='stage-3 stage'></div>
+          <div id='stage-4' class='stage-4 stage'></div>
+          <div id='stage-5' class='stage-5 stage'></div>
+          <div id='stage-6' class='stage-6 stage'></div>
+          <div id='stage-7' class='stage-7 stage'></div>
+          <div id='stage-8' class='stage-8 stage'></div>
+          <div id='stage-9' class='stage-9 stage'></div>
+          <div id='stage-10' class='stage-10 stage'></div>
+          <div id='stage-11' class='stage-11 stage'>✖</div>
+          <div id='stage-12' class='stage-12 stage'>✖</div>
         </div>
-        <script src='./script.js' type='text/javascript'></script>
-    </body>
+      </div>
+      <div class='keyboard-container centre'>
+        <div>
+          <button id='q' class='key'>Q</button>
+          <button id='w' class='key'>W</button>
+          <button id='e' class='key'>E</button>
+          <button id='r' class='key'>R</button>
+          <button id='t' class='key'>T</button>
+          <button id='y' class='key'>Y</button>
+          <button id='u' class='key'>U</button>
+          <button id='i' class='key'>I</button>
+          <button id='o' class='key'>O</button>
+          <button id='p' class='key'>P</button>
+        </div>
+        <div>
+          <button id='a' class='key'>A</button>
+          <button id='s' class='key'>S</button>
+          <button id='d' class='key'>D</button>
+          <button id='f' class='key'>F</button>
+          <button id='g' class='key'>G</button>
+          <button id='h' class='key'>H</button>
+          <button id='j' class='key'>J</button>
+          <button id='k' class='key'>K</button>
+          <button id='l' class='key'>L</button>
+        </div>
+        <div>
+          <button id='z' class='key'>Z</button>
+          <button id='x' class='key'>X</button>
+          <button id='c' class='key'>C</button>
+          <button id='v' class='key'>V</button>
+          <button id='b' class='key'>B</button>
+          <button id='n' class='key'>N</button>
+          <button id='m' class='key'>M</button>
+        </div>
+      </div>
+      <div id='popup-container' class='popup-container'>
+        <div class='top-container'>
+          <h2 id='popup-title' class='popup-title'><span id='outcome'>$outcome</span></h2>
+          <button id='close-button' class='close-button'>x</button>
+        </div>
+        <div class='bottom-container'>
+            <p class='popup-content'>The word was <span id='word'>$word</span>!</p>
+            <p class='popup-content'>Letters guessed: <span id='letters-guessed'>$letters_guessed</span></p>
+            <button id='continue-button' class='continue-button'>Continue</button>
+        </div>
+      </div>
+    </div>
+    <script src='./script.js' type='text/javascript'></script>
+  </body>
 </html>

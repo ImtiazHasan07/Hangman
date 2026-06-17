@@ -4,7 +4,6 @@ class Game {
     this.word = this.words[Math.floor(Math.random() * this.words.length)];
     this.hiddenWord = new Array(this.word.length).fill(null);
     this.lettersGuessed = [];
-    this.events = [];
     this.createHiddenWord();
     this.initEvents();
   }
@@ -76,8 +75,6 @@ class Game {
   }
 
   toUnused(element) {
-    // backgroundColour: '#d3d6da'
-    // backgroundColour: '#878a8c'
     this.styleElement({ element, backgroundColour: '#ffffff', colour: '#000000' });
   }
 
